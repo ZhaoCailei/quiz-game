@@ -1,0 +1,115 @@
+/* 基础重置与深色背景 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 主容器卡片 */
+.quiz-container {
+    background: #1e1e1e;
+    width: 100%;
+    max-width: 800px;
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+/* 大标题 */
+.main-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+/* 题目文字（放大且居中） */
+.question-text {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 35px;
+    line-height: 1.5;
+    color: #f0f0f0;
+}
+
+/* 选项网格布局（垂直排列，间距宽松） */
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+/* 选项按钮样式（灰底白字，圆角悬浮效果） */
+.option-btn {
+    background: #333333;
+    color: #ffffff;
+    border: 2px solid #444444;
+    padding: 18px 25px;
+    font-size: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.option-btn:hover {
+    background: #444444;
+    border-color: #666666;
+    transform: translateY(-2px);
+}
+
+/* 选中与状态颜色 */
+.option-btn.correct {
+    background: #2e7d32;
+    border-color: #4caf50;
+}
+.option-btn.wrong {
+    background: #d32f2f;
+    border-color: #f44336;
+}
+.option-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* 反馈提示与下一题按钮 */
+.feedback {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.next-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 16px 40px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.next-btn:hover {
+    background: #0056b3;
+}
+
+/* 移动端适配 */
+@media (max-width: 600px) {
+    .quiz-container { padding: 30px 20px; }
+    .main-title { font-size: 32px; }
+    .question-text { font-size: 22px; }
+    .option-btn { font-size: 18px; padding: 15px; }
+}

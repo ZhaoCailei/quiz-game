@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>答题小游戏</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>答题小游戏</h1>
-        <div id="question-container">
-            <h2 id="question-text">加载题目中...</h2>
-            <div id="options-container"></div>
+    <div class="quiz-container">
+        <h1 class="main-title">答题小游戏</h1>
+        <div id="question-box">
+            <h2 class="question-text" id="questionTitle">加载题目中...</h2>
+            <div class="options-grid" id="optionsContainer">
+                <!-- 选项由JS动态渲染 -->
+            </div>
+            <div class="feedback" id="feedbackText"></div>
+            <button class="next-btn" id="nextBtn" style="display:none;">下一题</button>
         </div>
-        <div id="result-container" style="display:none;">
-            <h2>答题结束！</h2>
-            <p>你的得分：<span id="score">0</span> / <span id="total">0</span></p>
-            <button onclick="restartGame()">重新开始</button>
-        </div>
-        <button id="next-btn" onclick="nextQuestion()" style="display:none;">下一题</button>
     </div>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
